@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
+
+    <style>
+      /* Style for the tooltip */
+      .tooltip {
+        position: relative;
+        display: inline-block;
+        cursor: pointer;
+      }
+  
+      /* Tooltip text */
+      .tooltip .tooltiptext {
+        visibility: hidden;
+        width: 60px;
+        background-color: #555;
+        color: #fff;
+        text-align: center;
+        border-radius: 6px;
+        padding: 5px;
+        position: absolute;
+        z-index: 1;
+        bottom: -100%;
+        left: 30%;
+        /* margin-left: -60px; */
+        opacity: 0;
+        transition: opacity 0.3s;
+        font-size: 13px;
+      }
+  
+      /* Show the tooltip text when hovering over the tooltip container */
+      .tooltip:hover .tooltiptext {
+        visibility: visible;
+        opacity: 1;
+      }
+      /* =====search-bar======= */
+
+      .search-container {
+    text-align: center;
+    margin-top: 50px;
+    
+}
+
+#search-input {
+    padding: 1rem;
+    width: 300px;
+    font-size: 15px;
+   
+}
+
+/* .search {
+  font-weight: 600;
+  transition: all 300ms ease;
+  padding: 1rem;
+  width: 8rem;
+  border-radius: 2rem;
+
+} */
+.clear-icon {
+    cursor: pointer;
+    font-size: 16px;
+    color: #999;
+    position: relative;
+    display: inline-block;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    right: 50px;
+    display: none;
+}
+.change{
+  border-radius: 49%;
+}
+    </style>
+  </head>
+  <body>
+    
+    
+    <section id="profile">
+      <div class="section__pic-container">
+        <img src="./assets/review-1.jpg" alt="John Doe profile picture"  style="border-radius: 50%"/>
+      </div>
+      <div class="section__text">
+        <p class="section__text__p1">Hello, I'm</p>
+        <h1 class="title">Sagar</h1> <br>
+        <p class="section__text__p2" style="font-size: large;">@offxsagr</p>
+        <div class="btn-container">
+          <button
+            class="btn btn-color-2"
+            onclick="location.href='https://geetauniversity.com/login'"
+          >
+            Eflow
+          </button>
+          <button class="btn btn-color-1" onclick="location.href='http://gu.edu.in/login?dst=http%3A%2F%2Fwww.msftconnecttest.com%2Fredirect'">
+            Connect
+          </button>
+        </div>
+        <div id="socials-container">
+          <div class="tooltip">
+          <a href="https://google.com"><img
+            src="./assets/google.png" 
+            alt="My Github profile" class="icon"
+           >
+           </a>
+           <span class="tooltiptext">Google</span>
+          </div>
+           <div class="tooltip">
+          <a href="https://www.linkedin.com" target=""><img
+            src="./assets/linkedin.png"
+            alt="My LinkedIn profile"
+            class="icon"
+          />
+        </a>
+        <span class="tooltiptext">LinkedIn</span>
+          </div>
+        <div class="tooltip">
+          <a href="https://github.com"><img
+            src="./assets/github.png"  
+            alt="My Github profile" class="icon"
+           >
+           </a>
+           <span class="tooltiptext">Github</span>
+          </div>
+           <div class="tooltip">
+           <a href="https://chat.openai.com/"><img
+            src="./assets/gpt.png"  
+            alt="My Github profile" class="icon"
+           >
+           </a>
+           <span class="tooltiptext" style="width: 70px;">Chat GPT</span>
+          </div>
+           <div class="tooltip">
+           <a href="https://youtube.com"><img
+            src="./assets/youtube.png"  
+            alt="My Github profile" class="icon"
+           >
+           </a>
+           <span class="tooltiptext">Youtube</span>
+          </div>
+
+           <div class="tooltip">
+           <a href="https://www.blackbox.ai/"><img
+            src="./assets/black.png"  
+            alt="My Github profile" class="icon"
+           >
+           </a>
+           <span class="tooltiptext">BlackBox</span>
+          </div>
+          <div class="tooltip">
+            <a href="https://www.canva.com/"><img
+             src="./assets/canva.png"  
+             alt="My Github profile" class="icon"
+            >
+            </a>
+            <span class="tooltiptext">Canva</span>
+           </div>
+           <!-- =====changes====== -->
+           <div class="tooltip">
+            <a href="https://saurabhdaware.github.io/text-to-handwriting/"><img
+             src="./assets/text.png"  
+             alt="Text" class="icon change" 
+            >
+            </a>
+            <span class="tooltiptext">Text</span>
+           </div>
+           <br>
+
+           
+        </div> 
+        <div class="search-container">
+          <form id="search-form">
+              <input type="text" id="search-input" placeholder="Search on Google">
+              <span id="clear-input" class="clear-icon">&#10006;</span>
+
+              <button type="submit" class="search">Search</button>
+          </form>
+      </div>      </div>
+    </section>
+    
+    <script src="script.js"></script>
+  </body>
+</html>
